@@ -21,6 +21,7 @@ public class Q2 {
         Scanner sc = new Scanner(System.in);
         COMPLEX C1 = new COMPLEX();
         COMPLEX C2 = new COMPLEX();
+        COMPLEX result = new COMPLEX();
         System.out.print("Enter real part of first complex number: ");
         double real1 = sc.nextDouble();
         System.out.print("Enter image part of first complex number: ");
@@ -31,7 +32,6 @@ public class Q2 {
         System.out.print("Enter image part of second complex number: ");
         double imag2 = sc.nextDouble();
         C2.setData(real2, imag2);
-        COMPLEX result = new COMPLEX();
         result = result.add(C1, C2);
         result.display();
         sc.close();
