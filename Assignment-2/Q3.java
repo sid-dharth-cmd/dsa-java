@@ -1,36 +1,42 @@
-class BOOK{
+class Book {
     int bookId;
     double price;
     int quantity;
     static double totalAmount = 0;
-    BOOK(int bookId, double price, int quantity){
+
+    Book(int bookId, double price, int quantity){
         this.bookId = bookId;
         this.price = price;
         this.quantity = quantity;
-        totalAmount += calculateTotalCost();
-    }
-    void displayDetails(){
-        System.out.println("Book ID: "+bookId);
-        System.out.println("Price: "+price);
-        System.out.println("Quantity: "+quantity);
-    }
-    double calculateTotalCost(){
-        return price * quantity;
+
+        totalAmount += price * quantity;
     }
 
+    void displayDetails(){
+        System.out.println("Book ID: " + bookId);
+        System.out.println("Price: " + price);
+        System.out.println("Quantity: " + quantity);
+    }
+
+    double calculateCost(){
+        return price * quantity;
+    }
 }
 public class Q3 {
     public static void main(String[] args){
-        BOOK B1 = new BOOK(101, 500, 2);
-        BOOK B2 = new BOOK(102, 300, 3);
-        BOOK B3 = new BOOK(103, 450, 1);
-        BOOK B4 = new BOOK(104, 600, 4);
-        BOOK B5 = new BOOK(105, 250, 5);
-        B1.displayDetails();
-        B2.displayDetails();
-        B3.displayDetails();
-        B4.displayDetails();
-        B5.displayDetails();
-        System.out.println("Total amount spent on purchase of all the books: "+BOOK.totalAmount);
+
+        Book b1 = new Book(101, 200, 2);
+        Book b2 = new Book(102, 150, 1);
+        Book b3 = new Book(103, 300, 1);
+        Book b4 = new Book(104, 250, 2);
+        Book b5 = new Book(105, 100, 3);
+
+        b1.displayDetails();
+        b2.displayDetails();
+        b3.displayDetails();
+        b4.displayDetails();
+        b5.displayDetails();
+
+        System.out.println("Total Amount: " + Book.totalAmount);
     }
 }

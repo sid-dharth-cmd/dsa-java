@@ -1,4 +1,5 @@
 abstract class Shape {
+    abstract void area();
 }
 class Square extends Shape {
     double side;
