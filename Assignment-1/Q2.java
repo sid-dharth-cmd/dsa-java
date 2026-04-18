@@ -9,9 +9,9 @@ public class Q2 {
         double bmi = weight / Math.pow(height, 2);
         if (bmi < 18.5)
             System.out.println("The person is Underweight.");
-        else if (bmi >= 18.5 && bmi <= 24.9)
+        else if (bmi <= 24.9)
             System.out.println("The person is Normal Weight.");
-        else if (bmi >= 25 && bmi <= 29.9)
+        else if (bmi <= 29.9)
             System.out.println("The person is Overweight.");
         else 
             System.out.println("The person is Obese.");
