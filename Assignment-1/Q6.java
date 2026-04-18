@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class Q6 {
-    public static boolean isOdd(int n){
+    public static boolean isOdd(int n){     // return n & 1;
         if (n < 0)
             n = -n;
         while (n > 1){
